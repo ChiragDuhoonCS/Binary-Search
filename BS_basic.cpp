@@ -25,5 +25,10 @@ int main(){
     int n = sizeof(arr) / sizeof(arr[0]);
 
     fnx1(arr,n,target);
+
+    int result = fnx1(arr, n, target);
+    cout << "The target is at index: " << result << endl;
+
+
     return 0;
 }
