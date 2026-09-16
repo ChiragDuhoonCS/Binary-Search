@@ -52,3 +52,17 @@ int fnx1Recursive(int arr[], int target, int low, int high) {
     return 0;
 }*/
 
+
+int main(){
+    int target = 12;
+    int arr[]= {3,4,6,7,9,12,16,17};
+    int n = sizeof(arr) / sizeof(arr[0]);
+
+    fnx1Recursive(arr, target, 0, n - 1); //here 0 is low and n-1 is high
+
+    int result = fnx1(arr, n, target);
+    cout << "The target is at index: " << result << endl;
+
+
+    return 0;
+}
