@@ -5,37 +5,50 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-int floor(int arr[],int target, int n) {
-    int high = n-1;
+#include <bits/stdc++.h>
+using namespace std;
+
+// Floor = largest element <= target
+int floorValue(int arr[], int target, int n)
+{
     int low = 0;
-    int mid;
+    int high = n - 1;
     int ans = -1;
 
     while (low <= high)
     {
-        int mid = (low+high)/2;
+        int mid = low + (high - low) / 2; //! its safer because int remove decimals
+
+        if (arr[mid] <= target)
+        {
+            // arr[mid] can be the floor
+            ans = arr[mid];
+
+            // Try to find a bigger value which is still <= target
+            low = mid + 1;
+        }
+        else
+        {
+            // arr[mid] is too large
+            // Search on the left side
+            high = mid - 1;
+        }
     }
 
-      if(arr[mid] <= target ){
-          ans = arr[mid];
-          low = mid + 1;
-      }
-      else{
-          high = mid - 1;
-      }
-    
     return ans;
 }
 
-
-int main(){
-    int target = 5;
-    int arr[]= {3,4,6,7,9,12,16,17};
+int main()
+{
+    int arr[] = {3, 4, 6, 7, 9, 12, 16, 17};
     int n = sizeof(arr) / sizeof(arr[0]);
 
-    int ans = floor(arr,n,target);
-    cout << "The target is at index: " << arr[ans-1] << endl;
+    int target = 5;
 
+    int ans = floorValue(arr, target, n);
+
+    cout << "Target: " << target << endl;
+    cout << "Floor value: " << ans << endl; //@ floor value not index
 
     return 0;
 }
