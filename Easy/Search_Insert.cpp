@@ -3,6 +3,10 @@ using namespace std;
 
 /*int insert(int arr[], int n, int target) {*/
 
+//! we are using vector we can just use arr.size() instaed of n
+//! use vector to insert and exit element in vector  easily editable array by vector
+
+
 int findInsertPosition(vector<int>& arr, int target) {
     int low = 0;
     int high = arr.size() - 1;
@@ -42,10 +46,10 @@ int main() {
     vector<int> arr = {3, 4, 6, 7, 9, 12, 16, 17};
 
     // Find the correct index using your search logic
-    int ans = findInsertPosition(arr, target);
+    int ans = findInsertPosition(arr, target); //!here is important use of vector  we are inserting ans in it
 
     // Insert the target into the vector at the found index
-    arr.insert(arr.begin() + ans, target);
+    arr.insert(arr.begin() + ans, target); //! we are insterting from begin in array
 
     cout << "Updated Array elements: ";
     for (int i = 0; i < arr.size(); i++) {
