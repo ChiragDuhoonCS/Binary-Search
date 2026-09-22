@@ -14,11 +14,11 @@ int peak1(int arr[],int n) {
 
 }
 
-//@ OPTIMIZE ANSWER BY BINARY SEARCH
+//@ OPTIMIZE ANSWER BY BINARY SEARCH   TC == NLOGN
 int peak2(int arr[],int n){
-    if (n==1) return 0;
-    if (arr[0] > arr[1]) return 0;
-    if (arr[n-1] > arr[n-2]) return n-1;
+    if (n==1) return 0; // IF ONLY ONE ELEMENT IN ARRAY
+    if (arr[0] > arr[1]) return 0; // FIRST VALUE
+    if (arr[n-1] > arr[n-2]) return n-1; // LAST VALUE
 
     int low = 1;
     int high = n-2;
