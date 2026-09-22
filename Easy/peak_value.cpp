@@ -33,7 +33,7 @@ int peak2(int arr[],int n){
 
         else if(arr[mid] < arr[mid+1])
         high = mid - 1;
-    }
+    } //! ELSE (LOW = MID+1)   IF ARRAY HAVE MULTIPLE PEAK
     return -1;
 }
 
