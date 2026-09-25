@@ -1,6 +1,8 @@
 #include<bits/stdc++.h>
 using namespace std;
 
+
+//! LINEAR SEACH    TC OF N
 int brute(int n,int arr[],int target) {
     for (int i = 0; i < n; i++)
     {
@@ -12,6 +14,7 @@ int brute(int n,int arr[],int target) {
     
 }
 
+//! BINARY SEARCH  TC OF NLOGN
 int optimise(int n,int arr[],int target) {
     int low = 0;
     int high = n-1;
@@ -29,6 +32,9 @@ int optimise(int n,int arr[],int target) {
             if (arr[mid] < target && target <= arr[high])
                 low = mid + 1;
             
+             else {
+                high = mid - 1;
+            }
         }
     }
     return -1;
