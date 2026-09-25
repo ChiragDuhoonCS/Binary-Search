@@ -2,7 +2,7 @@
 using namespace std;
 
 int brute(int n , int arr[]){
-    int temp;
+   
     for (int i = 0; i < n; i++)
     {
        int mini = arr[0]; // Assume the first element is the minimum
@@ -14,6 +14,18 @@ int brute(int n , int arr[]){
     }
         return mini;
     }
+}
+
+int optimise(int n, int arr[]) {
+    int low = 0;
+    int high = n-1;
+    int mid;
+
+    while( low <= high){
+        int mid = (low + high)/2;
+    }
+    if (arr[low] <= arr[mid]);
+    
 }
     
 
