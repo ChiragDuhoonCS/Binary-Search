@@ -12,7 +12,7 @@ int linear(int arr[], int n) {
 }
 
 
-//! BINARY SEARCH
+//! BINARY SEARCH   TC 0(LOG N)
 int binary(int arr[] , int n) {
    int low = 1;
     int high = n - 2;
@@ -23,9 +23,9 @@ int binary(int arr[] , int n) {
     while(arr[low] <= arr[high]) {
         int mid = (low + high)/2;
 
-        if(arr[mid] > arr[mid-1] && arr[mid+1] < arr[mid]) return mid;
-        else if (arr[mid] > arr[mid-1]) return low = mid + 1;
-        else if (arr[mid] > arr[mid+1]) return high = mid - 1;
+        if(arr[mid] > arr[mid-1] && arr[mid+1] < arr[mid]) return mid; //@ FOR MID
+        else if (arr[mid] > arr[mid-1]) return low = mid + 1; //@ ELIMINATE FIRST HALF
+        else if (arr[mid] > arr[mid+1]) return high = mid - 1; //@ ELIMINATE SECOND HALF
     }
 
     return -1;
