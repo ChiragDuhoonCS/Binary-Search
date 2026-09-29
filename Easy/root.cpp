@@ -1,20 +1,18 @@
-#include<bits/stdc++.h>
+#include <bits/stdc++.h>
 using namespace std;
 
-int brute(int arr[],int n) {
-    for (size_t i = 0; i < n; i++)
-    {
-        if()
+int brute(int n) {
+    int ans = 0;
+    for (int i = 0; i * i <= n; i++) {//! important   here
+        ans = i; // Keep updating ans as long as i*i <= n
     }
-    
-
+    return ans;
 }
 
 int main() {
-    int arr[6] = {1, 2, 3, 5, 4, 3};
-    int n = sizeof(arr) / sizeof(arr[0]);
+    int n = 25;
 
-    int ans = binary(arr, n);
-    cout << "your target index " << ans << endl;
+    int ans = brute(n);
+    cout << "your under root " << ans << endl; 
     return 0;
 }
