@@ -26,7 +26,7 @@ int binary(int arr[] , int n) {
         if(arr[mid] > arr[mid-1] && arr[mid+1] < arr[mid]) return mid; //@ FOR MID
         else if (arr[mid] > arr[mid-1]) return low = mid + 1; //@ ELIMINATE FIRST HALF
         else if (arr[mid] > arr[mid+1]) return high = mid - 1; //@ ELIMINATE SECOND HALF
-    }
+    } // else low = mid+1; //! for multiple peak
 
     return -1;
 }
