@@ -10,6 +10,7 @@ int brute(int n) {
     return ans;
 }
 
+//! BINARY SOLUTION
 int binary(int n) {
     int ans;
     int low = 0;
@@ -27,9 +28,12 @@ int binary(int n) {
 }
 
 int main() {
-    int n = 25;
+    int n;
+
+    cout << "Square root of : ";
+    cin >> n;
 
     int ans = binary(n);
-    cout << "your under root " << ans << endl; 
+    cout << "Your Under root : " << ans << endl; 
     return 0;
 }
