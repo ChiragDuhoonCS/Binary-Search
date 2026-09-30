@@ -15,4 +15,17 @@ int brute(int n,int m) {
     return -1;
 }
 
-in
+int main() {
+    int n;
+    int m;
+
+    cout << "How many times : ";
+    cin >> n;
+
+    cout << "n root of : ";
+    cin >> m;
+
+    int ans = brute(n,m);
+    cout << "Your Under root : " << ans << endl; 
+    return 0;
+}
