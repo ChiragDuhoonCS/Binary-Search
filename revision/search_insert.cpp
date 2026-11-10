@@ -15,4 +15,13 @@ int main() {
             cout << "Index at which it get insert: " << mid <<endl;;
             return 0;
         }
-    
+        else if(arr[mid] < target) {
+            low = mid+1;
+        }
+        else {
+            high = mid - 1; //@ dont add return
+        }
+
+    }
+    cout << "Code failed";
+}
