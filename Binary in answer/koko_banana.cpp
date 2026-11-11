@@ -28,16 +28,6 @@ int brute(int piles[], int n, int h) {
 }
 
 
-int optimise(int piles[], int n, int h){
-    int low = 1;
-    int high = n-1;
-
-    while(low <= high){
-        int mid = (low+high)/2;
-        
-    }
-
-}
 int main() {
     int piles[] = {3, 6, 7, 11};
     int n = sizeof(piles) / sizeof(piles[0]);
