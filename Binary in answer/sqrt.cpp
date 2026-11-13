@@ -15,6 +15,8 @@ int brute(int n) {
     return ans;
 }
 
+
+//! without using int ans
 int optimise(int n) {
     int low = 0, high = n;
 
@@ -28,6 +30,7 @@ int optimise(int n) {
         }
     }
     
+    //! when low and high swap high holds our ans
     return high; // 'high' will hold the correct integer square root
 }
 
